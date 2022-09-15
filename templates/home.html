@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="predict">
+        <h1>Heart Disease Prediction</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <div class="input-box">
+               <input type="text" name="	age" placeholder="age" required="required" /><br>
+            </div>
+            <div class="input-box">
+               <input type="text" name="sex" placeholder="sex" required="required" /><br>
+            </div>
+            <div class="input-box">
+               <input type="text" name="cp" placeholder="chest pain" required="required" /><br>
+            </div>
+            <div class="input-box">
+               <input type="text" name="trestbps" placeholder="resting blood pressure" required="required" /><br>
+            </div>
+            <div class="input-box">
+               <input type="text" name="chol" placeholder="cholestrol" required="required" /><br>
+            </div>
+            <div class="input-box">  
+              <input type="text" name="fbs" placeholder="fasting blood pressure" required="required" /><br>
+            </div>
+            <div class="input-box">
+              <input type="text" name="restecg" placeholder="ecg" required="required" /><br>
+            </div>
+            <div class="input-box">
+                <input type="text" name="thalach" placeholder="maximum heart rate achieved " required="required" /><br>
+            </div>
+            <div class="input-box">
+                <input type="text" name="exang" placeholder="excersise induced angia" required="required" /><br>
+            </div>
+            <div class="input-box">
+                <input type="text" name="oldpeak" placeholder="oldpeak" required="required" /><br>
+            </div>
+            <div class="input-box">
+                <input type="text" name="slope" placeholder="slope" required="required" /><br>
+            </div>
+            <div class="input-box">
+                <input type="text" name="ca" placeholder="ca" required="required" /><br>
+            </div>
+            <div class="input-box">
+                <input type="text" name="thal" placeholder="thal" required="required" /><br>
+            </div>
+            <div class="input-type-box">
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </div>
+        </form>
+    
+       <br>
+       <br>
+      
+       
+     </div>
+     {{prediction_text}}
+    
+    
+</body>
+</html>
