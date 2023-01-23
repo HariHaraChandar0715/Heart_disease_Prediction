@@ -21,10 +21,20 @@
 
   1. Python Installation :
   
-     ` conda install python==3.5 `
+     ``` 
+     
+     conda install python==3.5 
+     
+  
+     ```
      
   2. Flask Installation :
   
-     ` pip install flask `
+     ```
+     
+     pip install flask
+     
+     
+     ```
  
  
